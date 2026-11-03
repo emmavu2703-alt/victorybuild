@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Landscape, plumbing and electrical work for Australian homeowners. Request a practical site visit and clear quote." />
+    <title>VictoryBuild | Home projects, properly coordinated</title>
+    <style>
+      :root { --ink:#17352b; --leaf:#2d674c; --clay:#c66d48; --sand:#f4f0e8; --sun:#f2c468; --line:#d5d1c7; --paper:#fffdf8; }
+      * { box-sizing:border-box; } html { scroll-behavior:smooth; }
+      body { margin:0; color:var(--ink); background:var(--paper); font-family:Arial, Helvetica, sans-serif; line-height:1.5; }
+      a { color:inherit; } .wrap { width:min(1120px, calc(100% - 40px)); margin:auto; }
+      .topline { background:var(--ink); color:#fff; font-size:.8rem; letter-spacing:.04em; padding:.55rem 0; text-align:center; }
+      header { display:flex; align-items:center; justify-content:space-between; min-height:76px; }
+      .brand { font-weight:800; font-size:1.05rem; text-decoration:none; letter-spacing:-.04em; } .brand span { color:var(--clay); }
+      nav { display:flex; gap:1.5rem; align-items:center; } nav a { text-decoration:none; font-size:.9rem; font-weight:700; }
+      .btn { display:inline-flex; justify-content:center; align-items:center; gap:.45rem; background:var(--clay); color:#fff; text-decoration:none; font-weight:800; padding:.9rem 1.15rem; border:2px solid var(--clay); min-height:48px; }
+      .btn.alt { color:var(--ink); background:transparent; border-color:var(--ink); } .btn:hover { transform:translateY(-2px); }
+      .hero { border-top:1px solid var(--line); overflow:hidden; }
+      .hero-grid { display:grid; grid-template-columns:1.05fr .95fr; min-height:580px; }
+      .hero-copy { padding:clamp(3.5rem,8vw,7rem) 1rem clamp(3rem,6vw,5rem) 0; align-self:center; }
+      .eyebrow { text-transform:uppercase; font-size:.72rem; font-weight:800; letter-spacing:.14em; color:var(--leaf); }
+      h1 { font:800 clamp(3.15rem,7vw,6.4rem)/.9 Georgia, 'Times New Roman', serif; letter-spacing:-.075em; margin:.55rem 0 1.5rem; max-width:720px; }
+      .hero p { font-size:1.08rem; max-width:510px; margin:0 0 2rem; } .actions { display:flex; flex-wrap:wrap; gap:.75rem; }
+      .plan { background:var(--sand); position:relative; min-height:100%; isolation:isolate; border-left:1px solid var(--line); }
+      .plan:before,.plan:after { content:""; position:absolute; inset:8% 10%; border:1px solid rgba(23,53,43,.25); transform:rotate(-5deg); } .plan:after { inset:20% 16%; transform:rotate(11deg); border-color:rgba(198,109,72,.55); }
+      .circle { position:absolute; width:clamp(145px,22vw,250px); aspect-ratio:1; border-radius:50%; background:var(--leaf); top:16%; right:16%; box-shadow:0 0 0 20px rgba(45,103,76,.12), 0 0 0 42px rgba(45,103,76,.07); }
+      .circle:after { content:"SITE / PLAN"; position:absolute; inset:0; display:grid; place-items:center; color:#fff; font-size:.72rem; font-weight:bold; letter-spacing:.15em; transform:rotate(-16deg); }
+      .measure { position:absolute; bottom:16%; left:12%; background:var(--paper); padding:1.1rem; border-left:5px solid var(--sun); font-size:.85rem; max-width:190px; box-shadow:8px 8px 0 rgba(23,53,43,.1); }
+      section { padding:clamp(4rem,8vw,7rem) 0; } .intro { display:grid; grid-template-columns:1fr 1fr; gap:4rem; border-bottom:1px solid var(--line); } h2 { font:800 clamp(2.1rem,4vw,4rem)/.98 Georgia,serif; letter-spacing:-.06em; margin:.45rem 0 1rem; }
+      .service-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:0; border:1px solid var(--line); } .service { padding:2rem; min-height:250px; border-right:1px solid var(--line); } .service:last-child { border:0; } .service b { display:block; color:var(--clay); font-size:.75rem; letter-spacing:.1em; margin-bottom:3rem; } .service h3 { font:700 1.6rem/1 Georgia,serif; margin:0 0 .8rem; }
+      .steps { background:var(--ink); color:#fff; } .steps .eyebrow { color:var(--sun); } .steps h2 { max-width:620px; } .step-grid { display:grid; grid-template-columns:repeat(3,1fr); margin-top:3rem; border-top:1px solid rgba(255,255,255,.3); } .step { padding:1.5rem 1.5rem 0 0; } .step strong { color:var(--sun); font:800 2.8rem Georgia,serif; }
+      .contact { display:grid; grid-template-columns:1fr .8fr; gap:3rem; align-items:end; } .contact-box { background:var(--sun); padding:2rem; } .contact-box p { margin:.5rem 0 1.5rem; } .contact-box .btn { background:var(--ink); border-color:var(--ink); width:100%; margin:.3rem 0; }
+      footer { border-top:1px solid var(--line); padding:2rem 0 6.5rem; font-size:.85rem; color:#466156; }
+      .mobile-cta { display:none; }
+      @media (max-width:720px) { .wrap { width:min(100% - 32px, 560px); } nav a:not(.btn) { display:none; } header { min-height:64px; } .hero-grid,.intro,.contact { grid-template-columns:1fr; } .hero-copy { padding:3.6rem 0 3rem; } h1 { font-size:clamp(3.15rem,15vw,5rem); } .plan { min-height:360px; border-left:0; border-top:1px solid var(--line); } .service-grid,.step-grid { grid-template-columns:1fr; } .service { border-right:0; border-bottom:1px solid var(--line); min-height:0; } .service:last-child { border-bottom:0; } .service b { margin-bottom:1.5rem; } .intro { gap:1rem; } .step { padding:1.2rem 0; border-bottom:1px solid rgba(255,255,255,.3); } .mobile-cta { display:flex; position:fixed; z-index:4; bottom:0; inset-inline:0; gap:.6rem; background:rgba(255,253,248,.96); padding:.7rem .8rem; border-top:1px solid var(--line); } .mobile-cta .btn { flex:1; padding:.75rem .4rem; font-size:.88rem; } }
+      @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .btn:hover { transform:none; } }
+    </style>
+  </head>
+  <body>
+    <div class="topline">For homeowners who want one practical team, not three separate trades.</div>
+    <header class="wrap"><a class="brand" href="#top">VICTORY<span>BUILD</span></a><nav><a href="#services">Services</a><a href="#how">How it works</a><a class="btn" href="#contact">Get a quote</a></nav></header>
+    <main id="top">
+      <section class="hero"><div class="wrap hero-grid"><div class="hero-copy"><div class="eyebrow">Outdoor works, coordinated</div><h1>Your home project, sorted from the ground up.</h1><p>Landscape, plumbing and electrical work planned together for Australian homeowners. Clear scope. Straight answers. A practical next step.</p><div class="actions"><a class="btn" href="tel:+61457310074">Call for a site visit</a><a class="btn alt" href="mailto:info@victorybuild.com.au">Email your project</a></div></div><div class="plan" aria-hidden="true"><div class="circle"></div><div class="measure">A better project starts with one team looking at the whole site.</div></div></div></section>
+      <section id="services" class="wrap intro"><div><div class="eyebrow">One site, one clear plan</div><h2>Less waiting between trades. Fewer loose ends.</h2></div><p>When outdoor work crosses landscaping, water and power, hand-offs create delays. We help homeowners coordinate the work so the site is ready for what comes next.</p></section>
+      <section class="wrap"><div class="service-grid"><article class="service"><b>01 / OUTDOORS</b><h3>Landscape works</h3><p>Practical outdoor upgrades that make the whole property easier to use and maintain.</p></article><article class="service"><b>02 / WATER</b><h3>Plumbing coordination</h3><p>Water points, drainage and site requirements considered before the garden is finished.</p></article><article class="service"><b>03 / POWER</b><h3>Electrical coordination</h3><p>Lighting, outdoor power and the planning that keeps the final result tidy.</p></article></div></section>
+      <section id="how" class="steps"><div class="wrap"><div class="eyebrow">A simple start</div><h2>Start with the site, not a sales pitch.</h2><div class="step-grid"><div class="step"><strong>01</strong><h3>Tell us what needs doing</h3><p>Call or email a short outline, your suburb and a few photos if you have them.</p></div><div class="step"><strong>02</strong><h3>We look at the whole job</h3><p>We discuss the site, sequencing and the practical constraints before work is scoped.</p></div><div class="step"><strong>03</strong><h3>You get a clear next step</h3><p>A straightforward conversation about what can happen next and what it will involve.</p></div></div></div></section>
+      <section id="contact" class="wrap contact"><div><div class="eyebrow">Ready when you are</div><h2>Tell us about your place.</h2><p>For a useful first conversation, include your suburb, the work you need and your preferred timeframe.</p></div><div class="contact-box"><strong>Start with a quick call or email.</strong><p>We’ll talk through the site and whether we’re the right fit.</p><a class="btn" href="tel:+61457310074">Call now</a><a class="btn" href="mailto:info@victorybuild.com.au">Send an email</a></div></section>
+    </main>
+    <footer class="wrap">© 2026 VictoryBuild. Landscape, plumbing and electrical project coordination.</footer>
+    <div class="mobile-cta"><a class="btn alt" href="mailto:info@victorybuild.com.au">Email</a><a class="btn" href="tel:+61457310074">Call now</a></div>
+  </body>
+</html>
