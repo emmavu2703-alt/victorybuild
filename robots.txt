@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://victorybuild-nhung-b227.vercel.app/sitemap.xml
